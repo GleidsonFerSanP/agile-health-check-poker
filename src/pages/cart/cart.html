@@ -13,6 +13,6 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content [ngClass]="{'cart-green': cartTypeEnum === 0, 'cart-green-up':cartTypeEnum === 1}">
 
 </ion-content>

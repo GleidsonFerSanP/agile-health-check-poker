@@ -14,3 +14,21 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+.rotate-up{
+    transform: rotate(-40deg);        
+}
+.rotate-down{
+    transform: rotate(40deg);        
+}
+
+.color-red{
+    background: rgb(233, 97, 97);
+}
+.color-green{
+    background: rgb(99, 223, 99);
+}
+.color-yellow{
+    background: rgb(252, 252, 118);
+}

@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { CartPage } from '../cart/cart';
-import { CartTypeEnum } from '../../model/CartTypeEnum';
+import { NavController, Platform } from 'ionic-angular';
+import { CardTypeEnum } from '../../model/CardTypeEnum';
+import { Card } from '../../model/Card';
+import { CardFactory } from '../../model/CardFactory';
+import { CardPage } from '../card/card';
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 @Component({
   selector: 'page-home',
@@ -9,41 +12,36 @@ import { CartTypeEnum } from '../../model/CartTypeEnum';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  cards = [];
 
+  constructor(public navCtrl: NavController, private screenOrientation: ScreenOrientation, private platform: Platform) {
   }
 
-  openCart(cartName: String){
+  ionViewDidLoad() {
+    console.log("M=ionViewDidLoad,  platform=", this.platform)
 
-    console.log(cartName);
-    this.navCtrl.push(CartPage, { cartTypeEnum: this.getCartTypeEnum(cartName) });
-
-  }
-
-  private getCartTypeEnum(cartName: String): CartTypeEnum{
-
-    switch (cartName) {
-      case 'GREEN':
-        return CartTypeEnum.GREEN;
-      case 'GREEN_UP':
-        return CartTypeEnum.GREEN_UP;
-      case 'GREEN_DOWN':
-        return CartTypeEnum.GREEN_DOWN;
-      case 'YELLOW':
-        return CartTypeEnum.YELLOW;
-      case 'YELLOW_UP':
-        return CartTypeEnum.YELLOW_UP;
-      case 'YELLOW_DOWN':
-        return CartTypeEnum.YELLOW_DOWN;
-      case 'RED':
-        return CartTypeEnum.RED;
-      case 'RED_UP':
-        return CartTypeEnum.RED_UP;
-      case 'RED_DOWN':
-        return CartTypeEnum.RED_DOWN;
+    if(this.platform.is('android') || this.platform.is('ios')){
+      this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
+      this.screenOrientation.unlock();
     }
 
+    for (let index = CardTypeEnum.GREEN; index <= CardTypeEnum.RED_DOWN; index++) {
+
+      this.cards.push(CardFactory.factory(index));      
+    }
+    console.log("M=ionViewDidLoad,  cards=", this.cards)
   }
 
+  openCard(cardTypeEnum: CardTypeEnum){
+    console.log("M=openCard,  cardTypeEnum=", cardTypeEnum)
+    this.navCtrl.push(CardPage, { card: this.getCard(cardTypeEnum)});
+  }
+
+  private getCard(cardTypeEnum: CardTypeEnum): Card{    
+    console.log("M=getCard,  cardTypeEnum=", cardTypeEnum)
+    let card = this.cards[cardTypeEnum]
+    console.log("M=getCard,  card=", card)
+    return card;
+  }
 
 }

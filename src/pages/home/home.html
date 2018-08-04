@@ -4,7 +4,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title custom-title>
-      Agile Health Poker
+      Agile Health Check Poker
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -13,124 +13,18 @@
 
     <ion-grid>
         <ion-row>
-          <ion-col col-3.5>
-              <ion-card (click)="openCart('GREEN_UP')">
+          <ion-col col-3.5 *ngFor="let card of cards;">
+              <ion-card (click)="openCard(card.type)">
                 
-                  <ion-card-content class="color-green">
+                  <ion-card-content [ngClass]="card.cssClass">
                     <div >
-                      <img class="arrow rotate-up-rigth" src="assets/imgs/right-arrow-green.svg">
+                      <img class="arrow" [ngClass]="card.arrow.cssClass" [src]="card.arrow.path">
                     </div>
                   </ion-card-content>
                 
                 </ion-card>
 
           </ion-col>
-          <ion-col col-3.5>
-            
-              <ion-card (click)="openCart('GREEN')">
-                
-                  <ion-card-content class="color-green">
-                    <div >
-                        <img class="arrow" src="assets/imgs/right-arrow-yellow.svg">
-                    </div>
-                  </ion-card-content>
-                
-                </ion-card>
-
-            </ion-col>
-            <ion-col col-3.5>
-                <ion-card (click)="openCart('GREEN_DOWN')">
-                
-                    <ion-card-content class="color-green">
-                      <div>
-                          <img class="arrow rotate-up-down" src="assets/imgs/right-arrow-red.svg">
-                      </div>
-                    </ion-card-content>
-                  
-                  </ion-card>
-              </ion-col>
-        </ion-row>
-       
-      </ion-grid>
-    <ion-grid>
-        <ion-row>
-          <ion-col col-3.5>
-              <ion-card>
-                
-                  <ion-card-content class="color-yellow">
-                    <div >
-                      <img class="arrow rotate-up-rigth" src="assets/imgs/right-arrow-green.svg">
-                    </div>
-                  </ion-card-content>
-                
-                </ion-card>
-
-          </ion-col>
-          <ion-col col-3.5>
-            
-              <ion-card>
-                
-                  <ion-card-content class="color-yellow">
-                    <div >
-                        <img class="arrow" src="assets/imgs/right-arrow-yellow.svg">
-                    </div>
-                  </ion-card-content>
-                
-                </ion-card>
-
-            </ion-col>
-            <ion-col col-3.5>
-                <ion-card>
-                
-                    <ion-card-content class="color-yellow">
-                      <div>
-                          <img class="arrow rotate-up-down" src="assets/imgs/right-arrow-red.svg">
-                      </div>
-                    </ion-card-content>
-                  
-                  </ion-card>
-              </ion-col>
-        </ion-row>
-       
-      </ion-grid>
-    <ion-grid>
-        <ion-row>
-          <ion-col col-3.5>
-              <ion-card>
-                
-                  <ion-card-content class="color-red">
-                    <div >
-                      <img class="arrow rotate-up-rigth" src="assets/imgs/right-arrow-green.svg">
-                    </div>
-                  </ion-card-content>
-                
-                </ion-card>
-
-          </ion-col>
-          <ion-col col-3.5>
-            
-              <ion-card>
-                
-                  <ion-card-content class="color-red">
-                    <div >
-                        <img class="arrow" src="assets/imgs/right-arrow-yellow.svg">
-                    </div>
-                  </ion-card-content>
-                
-                </ion-card>
-
-            </ion-col>
-            <ion-col col-3.5>
-                <ion-card>
-                
-                    <ion-card-content class="color-red">
-                      <div>
-                          <img class="arrow rotate-up-down" src="assets/imgs/right-arrow-red.svg">
-                      </div>
-                    </ion-card-content>
-                  
-                  </ion-card>
-              </ion-col>
         </ion-row>
        
       </ion-grid>

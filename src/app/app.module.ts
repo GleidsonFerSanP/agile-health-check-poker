@@ -4,16 +4,18 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { CartPage } from '../pages/cart/cart';
+import { CardPage } from '../pages/card/card';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    CartPage
+    CardPage
   ],
   imports: [
     BrowserModule,
@@ -23,10 +25,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    CartPage
+    CardPage
   ],
   providers: [
     StatusBar,
+    ScreenOrientation,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

@@ -4,50 +4,32 @@ page-home {
     }
 
     .col{
-        margin: -5px;
-        padding: 0px;
+        margin: -10px;
+        padding: 2px;
     }
 
     ion-card{
         border: 1px solid #000;
         border-radius: 5px !important;
     }
-
-    ion-card-content{
-        padding: 10px !important;
+   
+    .card-md{
+        width: calc(100% - 22px);
     }
-    
-    .arrow{
-        width: 100px;
-        height: 100px;
-        svg{
-            fill: #000;
-        }
-    }
-
-    .rotate-up-rigth{
-        transform: rotate(-40deg);        
-    }
-    .rotate-up-down{
-        transform: rotate(40deg);        
-    }
-
-    .color-red{
-        background: rgb(233, 97, 97);
-    }
-    .color-green{
-        background: rgb(99, 223, 99);
-    }
-    .color-yellow{
-        background: rgb(252, 252, 118);
-    }
-
     .no-padding{
         padding: 0px;
     }
 
     .card-content-md {
-        padding: 45px;
+        padding: 1px;
+        width: 100%;
+        min-width: 100px;
+    }
+
+    .card-content-ios{
+        padding: 1px;
+        width: 100%;
+        min-width: 100px;
     }
 
 }

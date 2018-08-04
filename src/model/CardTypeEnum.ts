@@ -1,4 +1,4 @@
-export enum CartTypeEnum{
+export enum CardTypeEnum{
     GREEN,
     GREEN_UP,
     GREEN_DOWN,

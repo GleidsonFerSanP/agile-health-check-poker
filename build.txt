@@ -1,0 +1,3 @@
+keytool -genkey -v -keystore agile-health-check-poker.jks -keyalg RSA -keysize 2048 -validity 10000 -alias agile-health-check-poker
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore agile-health-check-poker.jks app-release-unsigned.apk agile-health-check-poker

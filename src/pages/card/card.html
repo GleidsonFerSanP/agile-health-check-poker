@@ -15,11 +15,11 @@
 
 <ion-content>
 
-  <ion-card  (click)="openCard('GREEN')">
+  <ion-card id="this_card" (click)="rotateCard(card)">
                 
     <ion-card-content id="this_card_content" class="card-defalt" [ngClass]="card?.cssClass">
-      <div >
-          <img class="arrow" [ngClass]="card?.arrow?.cssClass" [src]="card?.arrow?.path">
+      <div>
+          <img class="arrow" *ngIf="card?.showArrow" [ngClass]="card?.arrow?.cssClass" [src]="card?.arrow?.path">
       </div>
     </ion-card-content>
   

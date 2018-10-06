@@ -33,31 +33,31 @@ export class CardFactory{
         switch (cardType) {
             case CardTypeEnum.GREEN:
                 console.log("CardTypeEnum.GREEN");
-                return new Card(CardFactory.CARD_TITLE_GREEN, cardType, CardFactory.CSS_CARD_GREEN, new Arrow(CardFactory.ARROW_PATH_YELLOW, CardFactory.CSS_ARROW));
+                return new Card(CardFactory.CARD_TITLE_GREEN, cardType, CardFactory.CSS_CARD_GREEN, new Arrow(CardFactory.ARROW_PATH_YELLOW, CardFactory.CSS_ARROW), true);
             case CardTypeEnum.GREEN_UP:
                 console.log("CardTypeEnum.GREEN_UP");
-                return new Card(CardFactory.CARD_TITLE_GREEN_UP, cardType, CardFactory.CSS_CARD_GREEN, new Arrow(CardFactory.ARROW_PATH_GREEN, CardFactory.CSS_ARROW_UP));
+                return new Card(CardFactory.CARD_TITLE_GREEN_UP, cardType, CardFactory.CSS_CARD_GREEN, new Arrow(CardFactory.ARROW_PATH_GREEN, CardFactory.CSS_ARROW_UP), true);
             case CardTypeEnum.GREEN_DOWN:
                 console.log("CardTypeEnum.GREEN_DOWN");
-                return new Card(CardFactory.CARD_TITLE_GREEN_DOWN, cardType, CardFactory.CSS_CARD_GREEN, new Arrow(CardFactory.ARROW_PATH_RED, CardFactory.CSS_ARROW_DOWN));
+                return new Card(CardFactory.CARD_TITLE_GREEN_DOWN, cardType, CardFactory.CSS_CARD_GREEN, new Arrow(CardFactory.ARROW_PATH_RED, CardFactory.CSS_ARROW_DOWN), true);
             case CardTypeEnum.YELLOW:
                 console.log("CardTypeEnum.YELLOW");
-                return new Card(CardFactory.CARD_TITLE_YELLOW, cardType, CardFactory.CSS_CARD_YELLOW, new Arrow(CardFactory.ARROW_PATH_YELLOW, CardFactory.CSS_ARROW));
+                return new Card(CardFactory.CARD_TITLE_YELLOW, cardType, CardFactory.CSS_CARD_YELLOW, new Arrow(CardFactory.ARROW_PATH_YELLOW, CardFactory.CSS_ARROW), true);
             case CardTypeEnum.YELLOW_UP:
                 console.log("CardTypeEnum.YELLOW_UP");
-                return new Card(CardFactory.CARD_TITLE_YELLOW_UP, cardType, CardFactory.CSS_CARD_YELLOW, new Arrow(CardFactory.ARROW_PATH_GREEN, CardFactory.CSS_ARROW_UP));
+                return new Card(CardFactory.CARD_TITLE_YELLOW_UP, cardType, CardFactory.CSS_CARD_YELLOW, new Arrow(CardFactory.ARROW_PATH_GREEN, CardFactory.CSS_ARROW_UP), true);
             case CardTypeEnum.YELLOW_DOWN:
                 console.log("CardTypeEnum.YELLOW_DOWN");
-                return new Card(CardFactory.CARD_TITLE_YELLOW_DOWN, cardType, CardFactory.CSS_CARD_YELLOW, new Arrow(CardFactory.ARROW_PATH_RED, CardFactory.CSS_ARROW_DOWN));
+                return new Card(CardFactory.CARD_TITLE_YELLOW_DOWN, cardType, CardFactory.CSS_CARD_YELLOW, new Arrow(CardFactory.ARROW_PATH_RED, CardFactory.CSS_ARROW_DOWN), true);
             case CardTypeEnum.RED:
                 console.log("CardTypeEnum.RED");
-                return new Card(CardFactory.CARD_TITLE_RED, cardType, CardFactory.CSS_CARD_RED, new Arrow(CardFactory.ARROW_PATH_YELLOW, CardFactory.CSS_ARROW));
+                return new Card(CardFactory.CARD_TITLE_RED, cardType, CardFactory.CSS_CARD_RED, new Arrow(CardFactory.ARROW_PATH_YELLOW, CardFactory.CSS_ARROW), true);
             case CardTypeEnum.RED_UP:
                 console.log("CardTypeEnum.RED_UP");
-                return new Card(CardFactory.CARD_TITLE_RED_UP, cardType, CardFactory.CSS_CARD_RED, new Arrow(CardFactory.ARROW_PATH_GREEN, CardFactory.CSS_ARROW_UP));
+                return new Card(CardFactory.CARD_TITLE_RED_UP, cardType, CardFactory.CSS_CARD_RED, new Arrow(CardFactory.ARROW_PATH_GREEN, CardFactory.CSS_ARROW_UP), true);
             case CardTypeEnum.RED_DOWN:
                 console.log("CardTypeEnum.RED_DOWN");
-                return new Card(CardFactory.CARD_TITLE_RED_DOWN, cardType, CardFactory.CSS_CARD_RED, new Arrow(CardFactory.ARROW_PATH_RED, CardFactory.CSS_ARROW_DOWN));
+                return new Card(CardFactory.CARD_TITLE_RED_DOWN, cardType, CardFactory.CSS_CARD_RED, new Arrow(CardFactory.ARROW_PATH_RED, CardFactory.CSS_ARROW_DOWN), true);
         }                
     }
 
